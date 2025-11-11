@@ -1,2 +1,70 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+:root {
+    /* ### Primary */
+    --blue-600: hsl(231, 69%, 60%);
+    --red-400: hsl(0, 94%, 66%);
+
+    /* ### Neutral */
+
+    --grey-50: hsl(0, 0%, 97%);
+    --blue-950: hsl(229, 31%, 21%);
+}
+@font-face {
+    font-family: Rubik;
+    src: url('./font/Rubik/Rubik-VariableFont_wght.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+body {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+header {
+    padding: 16px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+}
+p {
+    font-size: 18px;
+    text-align: center;
+    color: var(--blue-950);
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.hero-section, .hero-section-reverse {
+    width: 100%;
+    height: 100%;
+}
+.logo-bookmark {
+    width: 140px;
+    height: 30px;
+}
+.btn {
+    cursor: pointer;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: inherit;
+}
+.btn-blue-600 {
+    color: var(--grey-50);
+    background-color: var(--blue-600);
+}
+.menu-phone {
+    display: none;
+    position: absolute;
+}
