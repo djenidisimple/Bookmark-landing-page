@@ -10,7 +10,7 @@
 <body>
   <header>
     <img src="./images/logo-bookmark.svg" alt="logo-bookmark" class="logo-bookmark">
-    <button type="button" class="btn">
+    <button type="button" class="btn p-none">
       <img src="./images/icon-hamburger.svg" alt="icon-hamburger">
     </button>
     <div class="menu-phone">
@@ -22,12 +22,12 @@
   </header>
   <main>
     <img src="./images/illustration-hero.svg" alt="hero" class="hero-section">
-    <h1>A Simple Bookmark Manager</h1>
+    <h1 class="size-xl">A Simple Bookmark Manager</h1>
     <p>
       A clean and simple interface to organize your favourite websites. Open a new 
       browser tab and see your sites load instantly. Try it for free.
     </p>
-    <div class="container">
+    <div class="space-between">
       <button type="button" class="btn btn-blue-600">
         Get it on Chrome
       </button>
@@ -42,11 +42,21 @@
       Your bookmarks sync between your devices so you can access them on the go.
     </p>
     
-    Simple Bookmarking
-    Speedy Searching
-    Easy Sharing
+    <table class="mb-2">
+      <tbody>
+        <tr>
+          <td>Simple Bookmarking</td>
+        </tr>
+        <tr>
+          <td>Speedy Searching</td>
+        </tr>
+        <tr>
+          <td>Easy Sharing</td>
+        </tr>
+      </tbody>
+    </table>
     
-    <img src="./images/illustration-hero.svg" alt="hero-section" class="hero-section-reverse">
+    <img src="./images/illustration-features-tab-1.svg" alt="hero-section" class="hero-section-reverse">
     
     <h1>Bookmark in one click</h1>
     <p>
@@ -92,31 +102,45 @@
       got a favourite you’d like us to prioritize.
     </p>
     
-    <div class="card">
-      <img src="./images/logo-chrome.svg" alt="logo-chrome">
-      <h2>Add to Chrome</h2>
-      <p>Minimum version 62</p>
-      <button type="button" class="btn btn-extension">
-        Add & Install Extension
-      </button>
-    </div>
-
-    <div class="card">
-      <img src="./images/logo-firefox.svg" alt="logo-firefox">
-      <h2>Add to Firefox</h2>
-      <p>Minimum version 55</p>
-      <button type="button" class="btn btn-extension">
-        Add & Install Extension
-      </button>
-    </div>
-
-    <div class="card">
-      <img src="./images/logo-opera.svg" alt="logo-opera">
-      <h2>Add to Opera</h2>
-      <p>Minimum version 46</p>
-      <button type="button" class="btn btn-extension">
-        Add & Install Extension
-      </button>
+    <div class="gap">
+      <div class="card">
+        <div class="center">
+          <img src="./images/logo-chrome.svg" alt="logo-chrome">
+        </div>
+        <div>
+          <h2>Add to Chrome</h2>
+          <p>Minimum version 62</p>
+        </div>
+        <button type="button" class="btn btn-blue-600">
+          Add & Install Extension
+        </button>
+      </div>
+  
+      <div class="card">
+        <div class="center">
+          <img src="./images/logo-firefox.svg" alt="logo-firefox">
+        </div>
+        <div>
+          <h2>Add to Firefox</h2>
+          <p>Minimum version 55</p>
+        </div>
+        <button type="button" class="btn btn-blue-600">
+          Add & Install Extension
+        </button>
+      </div>
+  
+      <div class="card">
+        <div class="center">
+          <img src="./images/logo-opera.svg" alt="logo-opera">
+        </div>
+        <div>
+          <h2>Add to Opera</h2>
+          <p>Minimum version 46</p>
+        </div>
+        <button type="button" class="btn btn-blue-600">
+          Add & Install Extension
+        </button>
+      </div>
     </div>
     
     <h1>Frequently Asked Questions</h1>
@@ -125,86 +149,94 @@
       answered please feel free to email us.
     </p>
     
-    <button type="button" class="btn-question">
-      <!-- Question 1 -->
-      What is Bookmark?
-    </button>
+    <div class="flex-col">
+      <button type="button" class="btn-question">
+        <!-- Question 1 -->
+        What is Bookmark?
+      </button>
+      
+      <div class="answer">
+        <!-- Answer 1 -->
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+        justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+      </div>
     
-    <div class="answer">
-      <!-- Answer 1 -->
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
-      justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+      <button type="button" class="btn-question">
+        <!-- Question 2 -->
+        How can I request a new browser?
+      </button>
+      
+      <div class="answer">
+        <!-- Answer 2 -->
+        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+        Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+        ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+      </div>
+      
+      <button type="button" class="btn-question">
+        <!-- Question 3 -->
+        Is there a mobile app?
+      </button>
+      
+      <div class="answer">
+        <!-- Answer 3 -->
+        Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+        urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+        sollicitudin ex et ultricies bibendum.
+      </div>
+      
+      <button type="button" class="btn-question">
+        <!-- Question 4 -->
+        What about other Chromium browsers?
+      </button>
+      
+      <div class="answer">
+        <!-- Answer 4 -->
+        Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+        vitae neque eget nisl gravida pellentesque non ut velit.
+      </div>
     </div>
-  
-    <button type="button" class="btn-question">
-      <!-- Question 2 -->
-      How can I request a new browser?
-    </button>
-    
-    <div class="answer">
-      <!-- Answer 2 -->
-      Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-      Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-      ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-      Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+    <div class="container mb-8 mt-2">
+      <button type="button" class="btn btn-blue-600">
+        More Info
+      </button>
     </div>
-    
-    <button type="button" class="btn-question">
-      <!-- Question 3 -->
-      Is there a mobile app?
-    </button>
-    
-    <div class="answer">
-      <!-- Answer 3 -->
-      Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-      urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-      sollicitudin ex et ultricies bibendum.
-    </div>
-    
-    <button type="button" class="btn-question">
-      <!-- Question 4 -->
-      What about other Chromium browsers?
-    </button>
-    
-    <div class="answer">
-      <!-- Answer 4 -->
-      Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
-      vitae neque eget nisl gravida pellentesque non ut velit.
-    </div>
-
-    <button type="button" class="btn btn-blue-600">
-      More Info
-    </button>
   </main>
   
   <footer>
     <div class="contact">
-      35,000+ already joined
-
-      <h1>Stay up-to-date with what we’re doing</h1>
-      <input type="email" name="email" id="adress">
-      <button type="button" class="btn btn-red">
-        Contact Us
-      </button>
+      <span class="text-center text-white block">35,000+ already joined</span>
+      <h2 class="text-white">Stay up-to-date with what we’re doing</h2>
+      <div class="gap-1 mt-2">
+        <input type="email" name="email" id="adress">
+        <button type="button" class="btn btn-red w-full">
+          Contact Us
+        </button>
+      </div>
     </div>
     <div class="element">
-      <img src="./images/logo-bookmark.svg" alt="logo-bookmark">
-      <p>
-        Features
-      </p>
-      <span>
-        Pricing
-      </span>
-      <span>
-        Contact
-      </span>
-      <span>
-        <img src="./images/icon-facebook.svg" alt="icon-facebook">
-        <img src="./images/icon-twitter.svg" alt="icon-twitter">
-      </span>
-      <p class="attribution">
+      <div class="center">
+        <img src="./images/logo-bookmark.svg" alt="logo-bookmark" class="logo-bookmark">
+      </div>
+      <div class="center">
+        <span class="text-white text-center">
+          Features
+        </span>
+        <span class="block text-white text-center">
+          Pricing
+        </span>
+        <span class="block text-white text-center">
+          Contact
+        </span>
+        <span class="center gap-2">
+          <img src="./images/icon-facebook.svg" alt="icon-facebook">
+          <img src="./images/icon-twitter.svg" alt="icon-twitter">
+        </span>
+      </div>
+      <p class="attribution text-white">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="#">Djenidi</a>.
       </p>
     </div>
   </footer>
