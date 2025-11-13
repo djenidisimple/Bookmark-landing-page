@@ -68,7 +68,7 @@ main {
 }
 .space-between {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1em;
 }
 h1 {
@@ -148,7 +148,7 @@ input {
 .btn {
     cursor: pointer;
     border: none;
-    padding: 15px 20px;
+    padding: 15px 25px;
     border-radius: 5px;
 }
 .flex-col {
@@ -190,7 +190,12 @@ input {
 .btn-blue-600 {
     color: white;
     background-color: var(--blue-600);
-    padding: 1em;
+}
+.border-bottom {
+    text-decoration: underline;
+    text-decoration-color: var(--red-400);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 16px;
 }
 .menu-phone {
     display: none;
