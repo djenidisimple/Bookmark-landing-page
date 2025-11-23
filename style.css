@@ -14,6 +14,9 @@
     --grey-200: hsla(0, 33%, 1%, 0.836);
     --grey-300: hsla(0, 46%, 5%, 0.76);
     --blue-950: hsl(229, 31%, 21%);
+    --arrow-up: url('./images/icon-arrow-up.png');
+    --arrow-down: url('./images/icon-arrow.svg');
+    --current-icon: var(--arrow-down);
 }
 @font-face {
     font-family: Rubik;
@@ -158,7 +161,6 @@ p {
 }
 .contact {
     background-color: var(--blue-500);
-    /* padding: 3.5em 2em; */
 }
 .pt-3 {
     padding-top: 3.5em;
@@ -263,13 +265,10 @@ input {
     content: "";
     width: 20px;
     height: 20px;
-    background: url('./images/icon-arrow.svg') center no-repeat;
+    background: var(--current-icon, var(--arrow-down)) center no-repeat;
     background-color: inherit;
     background-size: contain;
 }
-.btn-question:focus + .answer {
-    display: block;
-}   
 .bold {
     font-size: 18px;
     font-weight: 500!important;
