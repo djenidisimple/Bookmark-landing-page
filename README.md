@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![logo](./images/background.png)
+![logo](./background.png)
 
 </div>
 
