@@ -120,43 +120,49 @@
         <div class="center">
           <img src="./images/logo-chrome.svg" alt="logo-chrome">
         </div>
-        <div>
+        <div class="card-title">
           <h2>Add to Chrome</h2>
           <p>Minimum version 62</p>
         </div>
-        <button type="button" class="btn btn-blue-600">
-          Add & Install Extension
-        </button>
+        <div class="card-footer">
+          <button type="button" class="btn btn-blue-600 p-x-3">
+            Add & Install Extension
+          </button>
+        </div>
       </div>
   
       <div class="card">
         <div class="center">
           <img src="./images/logo-firefox.svg" alt="logo-firefox">
         </div>
-        <div>
+        <div class="card-title">
           <h2>Add to Firefox</h2>
           <p>Minimum version 55</p>
         </div>
-        <button type="button" class="btn btn-blue-600">
-          Add & Install Extension
-        </button>
+        <div class="card-footer">
+          <button type="button" class="btn btn-blue-600 p-x-3">
+            Add & Install Extension
+          </button>
+        </div>
       </div>
   
       <div class="card">
         <div class="center">
           <img src="./images/logo-opera.svg" alt="logo-opera">
         </div>
-        <div>
-          <h2>Add to Opera</h2>
-          <p>Minimum version 46</p>
+        <div class="card-title">
+          <h2 class="block">Add to Opera</h2>
+          <p class="block">Minimum version 46</p>
         </div>
-        <button type="button" class="btn btn-blue-600">
-          Add & Install Extension
-        </button>
+        <div class="card-footer">
+          <button type="button" class="btn btn-blue-600 p-x-3">
+            Add & Install Extension
+          </button>
+        </div>
       </div>
     </div>
     
-    <h1 class="p-x-2">Frequently Asked Questions</h1>
+    <h1 class="p-x-2 mt-7">Frequently Asked Questions</h1>
     <p class="p-x-2">
       Here are some of our FAQs. If you have any other questions you’d like 
       answered please feel free to email us.
@@ -211,17 +217,19 @@
       </div>
     </div>
     <div class="container mb-8 mt-2">
-      <button type="button" class="btn btn-blue-600">
+      <button type="button" class="btn btn-blue-600 p-x-2">
         More Info
       </button>
     </div>
   </main>
   
   <footer>
-    <div class="contact">
-      <span class="text-center text-white block">35,000+ already joined</span>
-      <h2 class="text-white">Stay up-to-date with what we’re doing</h2>
-      <div class="gap-1 mt-2">
+    <div class="contact relative">
+      <div class="pt-3">
+        <span class="text-center text-white block size-sm letter-spacing text-uppercase mb-1">35,000+ already joined</span>
+        <h2 class="title-final">Stay up-to-date with what we’re doing</h2>
+      </div>
+      <div class="gap-1 mt-2 padding-contact">
         <input type="email" name="email" id="adress">
         <button type="button" class="btn btn-red w-full">
           Contact Us
@@ -229,8 +237,9 @@
       </div>
     </div>
     <div class="element">
-      <div class="center">
-        <img src="./images/logo-bookmark.svg" alt="logo-bookmark" class="logo-bookmark">
+      <div class="center-no-wrap gap-x-1 mb-1">
+        <img src="./images/bookmark.png" alt="bookmark" onerror="this.onerror=null; this.src='./images/icon-error.svg'">
+        <span class="text-white bold">BOOKMARK</span>
       </div>
       <div class="center">
         <span class="text-white text-center">
