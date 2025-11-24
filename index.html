@@ -10,15 +10,30 @@
 <body>
   <header>
     <img src="./images/logo-bookmark.svg" alt="logo-bookmark" class="logo-bookmark">
-    <button type="button" class="btn p-none">
+    <button type="button" class="btn p-none" id="btn-open">
       <img src="./images/icon-hamburger.svg" alt="icon-hamburger">
     </button>
-    <div class="menu-phone">
-      Features
-      Pricing
-      Contact
-      Login
-    </div>
+    <nav class="p-x-2 display-none" id="mobile">
+      <div class="space-between w-full menu-links">
+        <div class="logo">
+          <img src="./images/bookmark-logo.png" alt="bookmark-logo" onerror="this.onerror=null; this.src='./images/icon-error.svg'">
+          BOOKMARK
+        </div>
+        <button type="button" class="btn p-none bg-none" id="btn-close">
+          <img src="./images/icon-close.svg" alt="icon-close">
+        </button>
+      </div>
+      <div class="nav-links">
+        <a href="#" class="link">Features</a>
+        <a href="#" class="link">Pricing</a>
+        <a href="#" class="link">Contact</a>
+        <a href="#" class="btn-login">Login</a>
+      </div>
+      <div class="center-gap gap-2 bottom w-full">
+        <img src="./images/icon-facebook.svg" alt="icon-facebook">
+        <img src="./images/icon-twitter.svg" alt="icon-twitter">
+      </div>
+    </nav>
   </header>
   <main>
     <div class="mt-3 relative p-0-5">
@@ -30,7 +45,7 @@
       A clean and simple interface to organize your favourite websites. Open a new 
       browser tab and see your sites load instantly. Try it for free.
     </p>
-    <div class="space-between">
+    <div class="center-gap">
       <button type="button" class="btn btn-blue-600">
         Get it on Chrome
       </button>

@@ -1,4 +1,9 @@
+// declaration variable
 const btnQuestion = document.querySelectorAll('.btn-question');
+const btnOpen = document.getElementById('btn-open');
+const btnClose = document.getElementById('btn-close');
+const nav = document.getElementById('mobile');
+
 btnQuestion.forEach((btn) => {
     btn.addEventListener('click', () => {
         const answer = btn.nextElementSibling;
@@ -18,4 +23,14 @@ btnQuestion.forEach((btn) => {
             btn.style.setProperty('--current-icon', 'var(--arrow-up)');
         }
     });
+});
+
+btnOpen.addEventListener('click', () => {
+    nav.classList.remove('display-none');
+    document.body.classList.add('no-scroll');
+});
+
+btnClose.addEventListener('click', () => {
+    nav.classList.add('display-none');
+    document.body.classList.remove('no-scroll');
 });
