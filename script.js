@@ -13,6 +13,9 @@ btnQuestion.forEach((btn) => {
         btnQuestion.forEach((b) => {
             b.style.setProperty('--current-icon', 'var(--arrow-down)');
         });
+        
+        btn.classList.toggle('active', !isVisible);
+
         document.querySelectorAll('.answer').forEach((ans) => { 
             ans.style.display = 'none'; 
         });

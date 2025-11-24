@@ -81,7 +81,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-nav {
+nav.mobile {
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -89,6 +89,9 @@ nav {
     top: 0;
     left: 0;
     z-index: 1;
+}
+#desktop {
+    display: none;
 }
 .nav-links {
     display: flex;
@@ -200,13 +203,13 @@ td {
     color: var(--grey-150);
 }
 .size-sm {
-    font-size: 12px;
+    font-size: 12px!important;
 }
 .size-md {
-    font-size: 24px;
+    font-size: 24px!important;
 }
 .size-xl {
-    font-size: 30px;
+    font-size: 30px!important;
 }
 .letter-spacing {
     letter-spacing: 5px;
@@ -247,6 +250,9 @@ p {
     margin-bottom: 8em;
 }
 .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--blue-500);
 }
 .pt-3 {
@@ -269,16 +275,17 @@ input {
 .w-full {
     width: 100%;
 }
-.btn-red {
+.btn-contact {
+    width: 100%;
     background-color: var(--red-400);
     color: white;
 }
 .text-white {
-    color: white;
+    color: white!important;
 }
 .title-final {
     color: white;
-    font-size: 24px;
+    font-size: 4vh;
 }
 .container {
     display: flex;
@@ -293,8 +300,8 @@ input {
 }
 .hero {
     position: absolute;
-    width: 300px;
-    height: 195px;
+    width: 82vw;
+    height: 30vh;
     bottom: 0;
     right: 0;
     z-index: -1;
@@ -345,6 +352,18 @@ input {
     color: var(--grey-150);
     font-size: 15px;
     background: inherit;
+}
+.btn-question:first-child {
+    border-top: 1px solid var(--grey-50);
+}
+.btn-question.active {
+    border-bottom: none;
+}
+.btn-question:focus {
+    outline: none;
+}
+.btn-question:hover {
+    color: black;
 }
 .btn-question::after {
     cursor: pointer;
@@ -463,4 +482,123 @@ h2 {
     background-color: var(--blue-950);
     padding: 2em;
     padding-bottom: 1em;
+}
+
+.align-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.align-footer span {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--cool-steel);
+}
+.center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.description {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+@media screen and (min-width: 768px) {
+    .align-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2em;
+    }
+    .element {
+        padding: 1em;
+    }
+    input[type="email"] {
+        width: 300px;
+    }
+    .btn-contact {
+        width: auto;
+    }
+    .title-final {
+        max-width: 30vw;
+    }
+    #btn-open {
+        display: none;
+    }
+    .section-question {
+        width: 85vh;
+    }
+    header {
+        justify-content: space-around;
+        gap: 3em;
+    }
+    nav,#desktop {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+    }
+    a.link:first-child {
+        border-top: none;
+    }
+    a.btn-login {
+        margin: 0;
+        padding: 10px 30px;
+        font-size: 13px;
+        width: auto;
+        border: none;
+        background-color: var(--red-400);
+    }
+    a.link {
+        font-size: 13px;
+        padding: 10px 30px;
+        width: auto;
+        border: none;
+        color: black;
+    }
+    .both-element {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .both-element > div:first-child {
+        margin: 0;
+        padding: 0;
+    }
+    .hero-section, .hero-section-reverse {
+        width: 45vw;
+        right: 0;
+    }
+    .hero {
+        width: 40vw;
+        height: 52vh;
+    }
+    .landing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 10.4em;
+        padding-right: 2em;
+        height: 15vh;
+    }
+    .landing > .center-gap {
+        width: 100%;
+        justify-content: start; 
+    }
+    h1.size-xl {
+        font-size: 7vh!important;
+        text-align: left;
+        width: 100%;
+    }
+    .description {
+        padding: 0;
+    }
+    p {
+        font-size: 2.8vh!important;
+        text-align: left;
+    }
 }
