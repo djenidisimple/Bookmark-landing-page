@@ -3,6 +3,7 @@ const btnQuestion = document.querySelectorAll('.btn-question');
 const btnOpen = document.getElementById('btn-open');
 const btnClose = document.getElementById('btn-close');
 const nav = document.getElementById('mobile');
+const btnLinks = document.querySelectorAll('.btn-link');
 
 btnQuestion.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -36,4 +37,21 @@ btnOpen.addEventListener('click', () => {
 btnClose.addEventListener('click', () => {
     nav.classList.add('display-none');
     document.body.classList.remove('no-scroll');
+});
+
+btnLinks.forEach((link, index) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Remove active class from all links
+        btnLinks.forEach((l) => l.classList.remove('btn-active'));
+        // Add active class to the clicked link
+        link.classList.add('btn-active');
+        
+        // Hide all content containers
+        document.querySelectorAll('.two-container').forEach((container) => {
+            container.classList.add('display-none');
+        });
+        // Show the corresponding content container
+        document.querySelectorAll('.two-container')[index].classList.remove('display-none');
+    })
 });

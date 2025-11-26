@@ -10,7 +10,7 @@
 <body>
   <header>
     <img src="./images/logo-bookmark.svg" alt="logo-bookmark" class="logo-bookmark">
-    <button type="button" class="btn p-none" id="btn-open">
+    <button type="button" class="btn bg-none p-none" id="btn-open">
       <img src="./images/icon-hamburger.svg" alt="icon-hamburger">
     </button>
     <nav id="desktop">
@@ -73,7 +73,7 @@
         </p>
         
         <div class="p-x-2 mb-1 mini-menu">
-          <a href="#" class="btn-link">Simple Bookmark</a>
+          <a href="#" class="btn-link btn-active">Simple Bookmark</a>
           <a href="#" class="btn-link">Speedy Searching</a>
           <a href="#" class="btn-link">Easy Sharing</a>
         </div>
@@ -100,30 +100,45 @@
       </div>
     </div>
 
-
-    <div class="more-info">
-      <h1>Intelligent search</h1>
-      <p>
-        Our powerful search feature will help you find saved sites in no time at all. 
-        No need to trawl through all of your bookmarks.
-      </p>
-      
-      <div class="container">
-        <button type="button" class="btn btn-blue-600">
-          More Info
-        </button>
+    <div class="two-container display-none">
+      <div class="mt-1 relative p-x-2 p-y-2">
+        <img src="./images/illustration-features-tab-2.svg" alt="hero-section" class="hero-section">
+        <div class="hero-reverse"></div>
       </div>
-      <h1>
-        Share your bookmarks
-      </h1>
-      <p>
-        Easily share your bookmarks and collections with others. Create a shareable 
-        link that you can send at the click of a button.
-      </p>
-      <div class="container">
-        <button type="button" class="btn btn-blue-600">
-          More Info
-        </button>
+      
+      <div class="element-variant">
+        <h1>Intelligent search</h1>
+        <p>
+          Our powerful search feature will help you find saved sites in no time at all. 
+          No need to trawl through all of your bookmarks.
+        </p>
+        <div class="container">
+          <button type="button" class="btn btn-blue-600">
+            More Info
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-container display-none">
+      <div class="mt-1 relative p-x-2 p-y-2">
+        <img src="./images/illustration-features-tab-3.svg" alt="hero-section" class="hero-section">
+        <div class="hero-reverse"></div>
+      </div>
+      
+      <div class="element-variant">
+        <h1>
+          Share your bookmarks
+        </h1>
+        <p>
+          Easily share your bookmarks and collections with others. Create a shareable 
+          link that you can send at the click of a button.
+        </p>
+        <div class="container">
+          <button type="button" class="btn btn-blue-600">
+            More Info
+          </button>
+        </div>
       </div>
     </div>
     
@@ -186,12 +201,12 @@
     
     <div class="center-column">
       <h1 class="p-x-2 mt-7">Frequently Asked Questions</h1>
-      <p class="p-x-2 section-question">
+      <p class="p-x-1 section-question text-center">
         Here are some of our FAQs. If you have any other questions you’d like 
         answered please feel free to email us.
       </p>
       <div class="flex-col p-x-1 section-question">
-        <button type="button" class="btn-question">
+        <button type="button" class="btn-question border-bottom-none">
           <!-- Question 1 -->
           What is Bookmark?
         </button>
@@ -202,7 +217,7 @@
           justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
         </div>
       
-        <button type="button" class="btn-question">
+        <button type="button" class="btn-question border-bottom-none">
           <!-- Question 2 -->
           How can I request a new browser?
         </button>
@@ -215,7 +230,7 @@
           Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
         </div>
         
-        <button type="button" class="btn-question">
+        <button type="button" class="btn-question border-bottom-none">
           <!-- Question 3 -->
           Is there a mobile app?
         </button>
@@ -265,15 +280,15 @@
           <img src="./images/bookmark.png" alt="bookmark" onerror="this.onerror=null; this.src='./images/icon-error.svg'">
           <span class="text-white bold">BOOKMARK</span>
         </div>
-        <span class="block text-center size-sm">
+        <a href="#" class="link text-white">
           Features
-        </span>
-        <span class="block text-center size-sm">
+        </a>
+        <a href="#" class="link text-white">
           Pricing
-        </span>
-        <span class="block text-center size-sm">
+        </a>
+        <a href="" class="link text-white">
           Contact
-        </span>
+        </a>
       </div>
       <div class="center gap-2">
         <img src="./images/icon-facebook.svg" alt="icon-facebook">

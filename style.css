@@ -12,9 +12,14 @@
     --grey-50: hsla(0, 0%, 8%, 0.26);
     --grey-100: hsla(0, 5%, 11%, 0.514);
     --grey-150: hsla(0, 46%, 5%, 0.781);
-    --grey-200: hsla(0, 33%, 1%, 0.836);
-    --grey-300: hsla(0, 46%, 5%, 0.76);
     --blue-950: hsl(229, 31%, 21%);
+
+    /*  */
+    --white: hsla(0, 0%, 100%, 1);
+    --white-2: hsla(0, 0%, 100%, 1);
+    --rosy-granite: hsla(240, 4%, 56%, 1);
+    --alabaster-grey: hsla(240, 5%, 87%, 1);
+    --pale-slate: hsla(228, 5%, 80%, 1);
 
     /* colors background */
     --space-indigo: #2F354Fff;
@@ -121,6 +126,9 @@ a.link {
     padding-bottom: 1.2em;
     text-transform: uppercase;
 }
+.link:hover {
+    color: var(--red-400)!important;
+}
 a.btn-login {
     width: 100%;
     display: block;
@@ -187,6 +195,7 @@ h1 {
     text-align: center;
     line-height: 120%;
     margin-top: 1em;
+    color: var(--space-indigo);
 }
 table {
     width: 100%;
@@ -221,7 +230,7 @@ p {
     font-size: 15px;
     line-height: 150%;
     text-align: center;
-    color: var(--grey-100);
+    color: var(--cool-steel);
     margin-top: 1em;
     margin-bottom: 2em;
 }
@@ -284,13 +293,19 @@ input {
 .btn-contact {
     width: 100%;
     background-color: var(--red-400);
-    color: white;
+    color: var(--white);
+    border: 2px solid var(--red-400);
+}
+.btn-contact:hover {
+    background-color: var(--white)!important;
+    color: var(--red-400);
+    border-color: var(--red-400)!important;
 }
 .text-white {
-    color: white!important;
+    color: var(--white)!important;
 }
 .title-final {
-    color: white;
+    color: var(--white);
     font-size: 4vh;
 }
 .container {
@@ -335,13 +350,6 @@ input {
     width: 145px;
     height: 25px;
 }
-.btn {
-    cursor: pointer;
-    border: none;
-    padding: 15px 16px;
-    border-radius: 5px;
-    font-weight: 500;
-}
 .flex-col {
     display: flex;
     flex-direction: column;
@@ -354,13 +362,14 @@ input {
     padding: 1em;
     padding-left: 0;
     padding-right: 0;
+    border-top: 1px solid var(--grey-50);
     border-bottom: 1px solid var(--grey-50);
     color: var(--grey-150);
     font-size: 15px;
     background: inherit;
 }
-.btn-question:first-child {
-    border-top: 1px solid var(--grey-50);
+.border-bottom-none {
+    border-bottom: none!important;
 }
 .btn-question.active {
     border-bottom: none;
@@ -399,6 +408,18 @@ input {
 .p-none {
     padding: 0;
 }
+.btn {
+    cursor: pointer;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+.btn:hover {
+    border-color: var(--space-indigo);
+    background: inherit;
+}
 .btn-blue-600 {
     color: white;
     background-color: var(--blue-600);
@@ -407,6 +428,7 @@ input {
 .btn-blue-600:hover {
     background-color: inherit;
     color: var(--blue-600);
+    border-color: var(--blue-600);
 }
 .border-bottom {
     text-decoration: underline;
@@ -498,7 +520,6 @@ h2 {
 .align-footer {
     display: flex;
     flex-direction: column;
-    gap: 2em;
 }
 .align-footer span {
     text-transform: uppercase;
@@ -519,19 +540,12 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
-.btn-link:first-child {
-    border-top: 1px solid var(--grey-50);
+.display-none {
+    display: none!important;
 }
-.btn-link:first-child::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 33vw;
-    height: 4px;
-    background-color: var(--red-400);
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.btn-active {
+    padding-bottom: 0.9em!important;    
+    border-bottom: 4px solid var(--red-400)!important;
 }
 .btn-link {
     position: relative;
@@ -539,7 +553,7 @@ h2 {
     display: block;
     color: black;
     text-decoration: none;
-    border-bottom: 1px solid var(--grey-50);
+    border-bottom: 2px solid var(--cool-steel);
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
@@ -565,6 +579,16 @@ h2 {
 @media screen and (min-width: 768px) {
     .two-container {
         flex-wrap: nowrap;
+    }
+    .btn-question {
+        font-size: 2.8vh;
+        padding-top: 1.2em;
+        padding-bottom: 1.2em;
+    }
+    .answer {
+        font-size: 2.7vh;
+        padding-top: 1em;
+        padding-bottom: 1.5em;
     }
     .w-md {
         width: 62%;
