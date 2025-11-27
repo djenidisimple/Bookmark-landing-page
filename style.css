@@ -39,7 +39,7 @@
     font-family: Rubik;
     src: url('./font/Rubik/Rubik-VariableFont_wght.ttf');
 }
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -365,21 +365,11 @@ input[type="email"]:focus {
 .hero {
     position: absolute;
     width: 82vw;
-    height: 30vh;
+    height: 215px;
     bottom: 0;
     right: 0;
     z-index: -1;
     border-bottom-left-radius: 100px;
-    background-color: var(--blue-600);
-}
-.hero-reverse {
-    position: absolute;
-    width: 310px;
-    height: 195px;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    border-bottom-right-radius: 100px;
     background-color: var(--blue-600);
 }
 .hero-section::after {
@@ -455,7 +445,7 @@ input[type="email"]:focus {
     color: var(--grey-100);
 }
 .p-none {
-    padding: 0;
+    padding: 0!important;
 }
 .btn {
     cursor: pointer;
@@ -631,26 +621,30 @@ h2 {
 }
 .illustration {
     display: flex;
+    position: relative;
     justify-content: center;
     padding: 1em;
 }
-.features-tab-1 {
+.features-tab-1 , .features-tab-2 , .features-tab-3 {
     width: 100%;
     height: auto;
     right: 0;
     top: 0;
 }
-.features-tab-2 {
-    width: 30vw;
-    height: auto;
-    right: 0;
-    top: 0;
+.blob {
+    position: absolute;
+    width: 95vw;
+    height: 215px;
+    background-color: var(--blue-600);
+    border-bottom-right-radius: 14vh;
+    bottom: -2.5vh;
+    left: -10vw;
+    z-index: -1;
 }
-.features-tab-3 {
-    width: 28vw;
+.feature-hero {
+    position: relative;
+    width: 100%;
     height: auto;
-    right: 0;
-    top: 0;
 }
 @media screen and (min-width: 768px) {
     .title-final {
@@ -791,11 +785,6 @@ h2 {
         position: relative;
         width: 100%;
         height: 65vh;
-    }
-    .feature-hero {
-        position: relative;
-        width: 100%;
-        height: auto;
     }
     .features-tab-1 {
         position: absolute;
