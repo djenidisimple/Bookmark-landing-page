@@ -281,17 +281,57 @@ p {
 .more-info {
     display: none;
 }
-input {
+input[type="email"] {
+    width: 80%;
+    height: 42px;
+    border: none;
+    padding: 1em;
+}
+input[type="email"]::placeholder {
+    color: var(--rosy-granite);
+    font-size: 14px;
+}
+input[type="email"]:focus {
+    outline: none;
+}
+.input-container {
+    display: flex;
     width: 100%;
-    height: 45px;
+    height: auto;
     border-radius: 5px;
-    border: 1px solid var(--grey-50);
+    padding: 0;
+    border: 2px solid var(--white);
+    z-index: 2;
+}
+.input-container:focus-within {
+    border: 2px solid var(--red-400);
+}
+.icon-message {
+    display: none;
+    width: 15%;
+    height: auto;
+    background: url(./images/icon-error.svg) center no-repeat;
+    background-color: var(--white);
+}
+.message-error {
+    color: var(--white-2);
+    background-color: var(--red-400);
+    font-size: 10px;
+    text-align: left;
+    padding: 0.8em;
+    padding-left: 1.2em;
+    padding-bottom: 0.6em;
+    border-radius: 5px;
+    margin-top: -0.5em;
+    z-index: 1;
+    display: none;
 }
 .w-full {
     width: 100%;
 }
 .btn-contact {
     width: 100%;
+    height: 7.5vh;
     background-color: var(--red-400);
     color: var(--white);
     border: 2px solid var(--red-400);
@@ -415,6 +455,7 @@ input {
     border-radius: 5px;
     font-weight: 500;
     border: 2px solid transparent;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .btn:hover {
     border-color: var(--space-indigo);
@@ -642,6 +683,7 @@ h2 {
     }
     .btn-contact {
         width: auto;
+        padding: 8px 20px;
     }
     .title-final {
         max-width: 30vw;
@@ -656,7 +698,9 @@ h2 {
         justify-content: start;
     }
     header {
-        justify-content: space-around;
+        justify-content: space-between;
+        padding-left: 8em;
+        padding-right: 8em;
     }
     nav,#desktop {
         width: 38vw;
@@ -675,6 +719,7 @@ h2 {
         width: auto;
         border: 2px solid transparent;
         background-color: var(--red-400);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
     a.btn-login:hover {
         background-color: var(--white)!important;
@@ -711,6 +756,11 @@ h2 {
         width: 100%;
         height: 65vh;
     }
+    .feature-hero {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
     .features-tab-1 {
         position: absolute;
         width: 35vw;
@@ -743,23 +793,22 @@ h2 {
         z-index: -1;
     }
     .hero-section {
-        width: 45vw;
+        width: 42vw;
         right: 0;
     }
-    .hero-section-reverse {
-        width: 39vw;
-    }
-    .hero, .hero-reverse {
-        width: 40vw;
-        height: 52vh;
+    .hero {
+        width: 35vw;
+        height: 54vh;
+        top: 16vh;
+        border-bottom-left-radius: 25vh;
     }
     .landing {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding-left: 10.4em;
-        padding-right: 2em;
+        padding-left: 8em;
+        padding-right: 3em;
         height: 15vh;
     }
     .landing > .center-gap {

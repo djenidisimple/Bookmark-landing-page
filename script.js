@@ -4,6 +4,8 @@ const btnOpen = document.getElementById('btn-open');
 const btnClose = document.getElementById('btn-close');
 const nav = document.getElementById('mobile');
 const btnLinks = document.querySelectorAll('.btn-link');
+const btnContact = document.querySelector('.btn-contact');
+const iconMess = document.querySelector('.icon-message');
 
 btnQuestion.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -58,4 +60,20 @@ btnLinks.forEach((link, index) => {
         document.querySelectorAll('.illustration')[index].classList.remove('display-none');
         document.querySelectorAll('.description-feature')[index].classList.remove('display-none');
     })
+});
+
+btnContact.addEventListener('click', (e) => {
+    const emailInput = document.getElementById('email');
+    const errorMessage = document.querySelector('.message-error');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    e.preventDefault();
+    if (!emailPattern.test(emailInput.value)) {
+        errorMessage.style.display = 'block';
+        iconMess.style.display = "block"
+        emailInput.classList.add('input-error');
+    } else {
+        errorMessage.style.display = 'none';
+        iconMess.style.display = "none"
+        emailInput.classList.remove('input-error');
+    }
 });

@@ -43,7 +43,7 @@
   </header>
   <main>
     <div class="both-element mt-3">
-      <div class="relative p-0-5">
+      <div class="feature-hero">
         <img src="./images/illustration-hero.svg" alt="hero" class="hero-section">
         <div class="hero"></div>
       </div>
@@ -264,7 +264,13 @@
         <h2 class="title-final p-x-1">Stay up-to-date with what we’re doing</h2>
       </div>
       <div class="gap-1 mt-2 padding-contact">
-        <input type="email" name="email" id="adress">
+        <div class="flex-col">
+          <div class="input-container">
+            <input type="email" name="email" id="email" placeholder="example@gmail.com">
+            <span class="icon-message"></span>
+          </div>
+          <span class="message-error">Whoops, make sure it's an email</span>
+        </div>
         <button type="button" class="btn btn-contact">
           Contact Us
         </button>
