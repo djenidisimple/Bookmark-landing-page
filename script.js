@@ -6,6 +6,7 @@ const nav = document.getElementById('mobile');
 const btnLinks = document.querySelectorAll('.btn-link');
 const btnContact = document.querySelector('.btn-contact');
 const iconMess = document.querySelector('.icon-message');
+const inputContainer = document.querySelector('.input-container')
 
 btnQuestion.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -71,9 +72,11 @@ btnContact.addEventListener('click', (e) => {
         errorMessage.style.display = 'block';
         iconMess.style.display = "block"
         emailInput.classList.add('input-error');
+        inputContainer.style.borderColor = 'var(--red-400)';
     } else {
         errorMessage.style.display = 'none';
         iconMess.style.display = "none"
         emailInput.classList.remove('input-error');
+        inputContainer.style.borderColor = 'var(--white)';
     }
 });
