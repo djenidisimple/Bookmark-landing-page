@@ -48,10 +48,14 @@ btnLinks.forEach((link, index) => {
         link.classList.add('btn-active');
         
         // Hide all content containers
-        document.querySelectorAll('.two-container').forEach((container) => {
+        document.querySelectorAll('.illustration').forEach((container) => {
+            container.classList.add('display-none');
+        });
+        document.querySelectorAll('.description-feature').forEach((container) => {
             container.classList.add('display-none');
         });
         // Show the corresponding content container
-        document.querySelectorAll('.two-container')[index].classList.remove('display-none');
+        document.querySelectorAll('.illustration')[index].classList.remove('display-none');
+        document.querySelectorAll('.description-feature')[index].classList.remove('display-none');
     })
 });

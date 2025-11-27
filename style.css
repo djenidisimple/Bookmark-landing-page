@@ -357,15 +357,13 @@ input {
 }
 .btn-question {
     text-align: left;
-    width: 100%;
+    width: 85vw;
     border: none;
     padding: 1em;
-    padding-left: 0;
-    padding-right: 0;
     border-top: 1px solid var(--grey-50);
     border-bottom: 1px solid var(--grey-50);
     color: var(--grey-150);
-    font-size: 15px;
+    font-size: 14px;
     background: inherit;
 }
 .border-bottom-none {
@@ -398,8 +396,10 @@ input {
     flex-wrap: nowrap!important;
 }
 .answer {
+    width: 85vw;
     display: none;
-    padding-top: 2em;
+    padding: 1em;
+    padding-top: 0.5em;
     padding-bottom: 1em;
     font-size: 15px;
     line-height: 190%;
@@ -547,6 +547,9 @@ h2 {
     padding-bottom: 0.9em!important;    
     border-bottom: 4px solid var(--red-400)!important;
 }
+.btn-link:first-child {
+    border-top: 2px solid var(--cool-steel);
+}
 .btn-link {
     position: relative;
     width: 100%;
@@ -579,13 +582,16 @@ h2 {
 @media screen and (min-width: 768px) {
     .two-container {
         flex-wrap: nowrap;
+        gap: 3em;
     }
     .btn-question {
+        width: 100%;
         font-size: 2.8vh;
         padding-top: 1.2em;
         padding-bottom: 1.2em;
     }
     .answer {
+        width: 100%;
         font-size: 2.7vh;
         padding-top: 1em;
         padding-bottom: 1.5em;
@@ -617,6 +623,10 @@ h2 {
     .btn-link:first-child::after {
         width: 100%;
     }
+    .btn-link {
+        width: 17.4vw!important;
+        padding-bottom: 1.5em!important;
+    }
     .align-footer {
         display: flex;
         flex-direction: row;
@@ -642,14 +652,6 @@ h2 {
     .section-question {
         width: 85vh;
     }
-    .element-variant > p {
-        padding-left: 0!important;
-        padding-right: 0!important;
-    }
-    .element-variant {
-        padding-left: 5em;
-        padding-right: 5em;
-    }
     .container {
         justify-content: start;
     }
@@ -671,8 +673,13 @@ h2 {
         padding: 10px 30px;
         font-size: 13px;
         width: auto;
-        border: none;
+        border: 2px solid transparent;
         background-color: var(--red-400);
+    }
+    a.btn-login:hover {
+        background-color: var(--white)!important;
+        color: var(--red-400);
+        border-color: var(--red-400)!important;
     }
     a.link {
         font-size: 13px;
@@ -689,6 +696,51 @@ h2 {
     .both-element > div:first-child {
         margin: 0;
         padding: 0;
+    }
+    .element-variant > p {
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    .element-variant {
+        height: 57vh;
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+    .feature-block {
+        position: relative;
+        width: 100%;
+        height: 65vh;
+    }
+    .features-tab-1 {
+        position: absolute;
+        width: 35vw;
+        height: auto;
+        right: 0;
+        top: 0;
+    }
+    .features-tab-2 {
+        position: absolute;
+        width: 30vw;
+        height: auto;
+        right: 0;
+        top: 0;
+    }
+    .features-tab-3 {
+        position: absolute;
+        width: 28vw;
+        height: auto;
+        right: 0;
+        top: 0;
+    }
+    .blob {
+        position: absolute;
+        width: 48vw;
+        height: 52vh;
+        background-color: var(--blue-600);
+        border-bottom-right-radius: 20vh;
+        top: 11vh;
+        left: -10vw;
+        z-index: -1;
     }
     .hero-section {
         width: 45vw;
