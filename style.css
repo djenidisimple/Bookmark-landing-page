@@ -491,6 +491,9 @@ input[type="email"]:focus {
     border-radius: 14px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+.card + .mt-4, .card + .mt-9 {
+    margin-top: 0!important;
+}
 .card-title {
     display: flex;
     justify-content: center;
@@ -614,7 +617,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 3em;
     padding-left: 3em;
     padding-right: 3em;
     flex-wrap: wrap;
@@ -647,8 +650,18 @@ h2 {
     height: auto;
 }
 @media screen and (min-width: 768px) {
+    .input-container {
+        width: auto;
+    }
     .title-final {
-        font-size: 4vh;
+        width: 100%;
+        font-size: 5.5vh;
+    }
+    .desc-contact {
+        width: 40vw;
+        text-align: center!important;
+        padding-left: 1em;
+        padding-right: 1em;
     }
     .two-container {
         flex-wrap: nowrap;
@@ -714,9 +727,6 @@ h2 {
         width: auto;
         height: 7.5vh;
         padding: 8px 20px;
-    }
-    .title-final {
-        max-width: 30vw;
     }
     #btn-open {
         display: none;
