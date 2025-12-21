@@ -4,7 +4,7 @@
     /* ### Primary */
     --blue-500: hsl(231, 61%, 51%);
     --blue-600: #5368df;
-    --red-400: hsl(0, 94%, 66%);
+    --red-400: rgb(250, 87, 87);
 
     /* ### Neutral */
     --neutral-100: lab(98.27% 0.01 -0.01 / 0.959);
@@ -421,10 +421,43 @@ input[type="email"]:focus {
     background: var(--current-icon) center no-repeat;
     background-size: contain;
 }
-.btn-question:hover::after {
+details summary {
+    list-style: none;
+}
+.btn-question:active::after {
     background: var(--arrow-up) center no-repeat;
     background-size: contain;
-    animation: 0.4s rotate-arrow ease forwards;
+    animation: 0.5s rotate-arrow ease forwards;
+}
+a.link-facebook {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url(./images/facebook-brands-solid-full.svg) center no-repeat;
+    background-size: contain;
+}
+a.link-facebook:hover {
+    background: url(./images/facebook-brands-solid-full-hover.svg) center no-repeat;
+}
+a.link-twitter {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url(./images/x-twitter-brands-solid-full.svg) center no-repeat;
+    background-size: contain;
+}
+a.link-twitter:hover {
+    background-image: url(./images/x-twitter-brands-solid-full-hover.svg);
+}
+a.link-github {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url(./images/github-brands-solid-full.svg) center no-repeat;
+    background-size: contain;
+}
+a.link-github:hover {
+    background-image: url(./images/github-brands-solid-full-hover.svg);
 }
 @keyframes rotate-arrow {
     0% {transform: rotate(180deg);}
@@ -553,6 +586,9 @@ input[type="email"]:focus {
 }
 .text-center {
     text-align: center;
+}
+.text-left {
+    text-align: left;
 }
 h2 {
     text-align: center;
