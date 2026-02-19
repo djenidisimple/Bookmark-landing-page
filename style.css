@@ -1,4 +1,4 @@
-.attribution { font-size: 11px; text-align: center; }
+.features-tab-1.attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 :root {
     /* ### Primary */
@@ -676,6 +676,12 @@ h2 {
     height: auto;
     right: 0;
     top: 0;
+}
+rect {
+    animation: 1s opacityAnimation infinite;
+}
+@keyframes opacityAnimation {
+    0% {opacity: 0.1;}
 }
 .blob {
     position: absolute;
